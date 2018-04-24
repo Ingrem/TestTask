@@ -1,0 +1,29 @@
+﻿<Window x:Class="TestTask.View.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTask"
+        mc:Ignorable="d"
+        Title="TestTask" Height="323.587" Width="346.201">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,58,0,0" Width="304" 
+                 Text="{Binding Path=RandomString.RandomString1, Mode=TwoWay}" Height="21"
+                 Foreground="{Binding Path=RandomString.String1Color, Mode=TwoWay}"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,84,0,0" Width="304" 
+                 Text="{Binding RandomString.RandomString2, Mode=TwoWay}" Height="21"
+                 Foreground="{Binding Path=RandomString.String2Color, Mode=TwoWay}"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" Width="304" 
+                 Text="{Binding RandomString.RandomString3, Mode=TwoWay}" Height="21"
+                 Foreground="{Binding Path=RandomString.String3Color, Mode=TwoWay}"/>
+        <Button Content="Previous" HorizontalAlignment="Left" Margin="201,238,0,0" VerticalAlignment="Top" Width="102" Height="27" 
+                Command="{Binding PreviousButtonCommand}"/>
+        <Button Content="Random" HorizontalAlignment="Left" Margin="32,238,0,0" VerticalAlignment="Top" Width="102" Height="27" 
+                Command="{Binding RandomButtonCommand}"/>
+        <Button Content="String" HorizontalAlignment="Left" Margin="32,21,0,0" VerticalAlignment="Top" Width="102" Height="27" 
+                Command="{Binding StringButtonCommand}" Background="{Binding Path=RandomString.ButtonStringColor, Mode=TwoWay}"/>
+        <Button Content="Int" HorizontalAlignment="Left" Margin="201,21,0,0" VerticalAlignment="Top" Width="102" Height="27"  
+                Command="{Binding IntButtonCommand}" Background="{Binding Path=RandomString.ButtonIntColor, Mode=TwoWay}"/>
+
+    </Grid>
+</Window>
